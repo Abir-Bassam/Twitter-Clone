@@ -1,0 +1,611 @@
+:root {
+  --light-blue-color: #1d9bf0;
+  --light-blue-hover-color: #1A8CD8;
+  --hover-color: #181818;
+  --border-color: #2f3336;
+  --black-color: #000;
+  --gray-color: #808080;
+  --white-color: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--black-color);
+  display: flex;
+}
+
+.btn-shape {
+  border-radius: 9999px;
+  background-color: var(--light-blue-color);
+  border: none;
+  transition: 0.25s all ease;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-shape a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.btn-shape:hover {
+  background-color: var(--light-blue-hover-color);
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left-sec {
+  width: fit-content;
+  padding: 7.5px;
+  position: sticky;
+  top: -0.5px;
+  height: 100vh;
+}
+
+.left-sec nav {
+  padding-left: 120px;
+}
+
+.left-sec nav ul {
+  list-style: none;
+}
+
+.left-sec nav ul li {
+  padding: 12.5px 20px;
+  border-radius: 9999px;
+  transition: 0.2s all ease;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.left-sec nav ul li:hover {
+  background-color: var(--hover-color);
+}
+
+.left-sec nav ul .active div {
+  position: relative;
+}
+
+.left-sec nav ul .active div::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--light-blue-color);
+  border-radius: 50%;
+  right: -2px;
+  top: -2px;
+}
+
+.left-sec nav ul .logo {
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.left-sec nav ul .logo i {
+  font-size: 30px;
+}
+
+.left-sec nav ul li a {
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.left-sec nav ul li a h2 {
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+.left-sec nav ul li:not(.active) a h2 {
+  font-weight: normal;
+}
+
+.left-sec nav button {
+  margin-top: 10px;
+  width: 90%;
+  padding: 17.5px 0;
+  margin-left: 20px;
+}
+
+.left-sec .profile {
+  width: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12.5px 20px;
+  margin-top: 50px;
+  border-radius: 9999px;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.left-sec .profile:hover {
+  background-color: var(--hover-color);
+}
+
+.left-sec .profile > div {
+  display: flex;
+  align-items: center;
+}
+
+.left-sec .profile div div {
+  color: var(--white-color);
+  margin-left: 10px;
+}
+
+.left-sec .profile div div p {
+  color: var(--gray-color);
+  margin-top: 5px;
+}
+
+.left-sec .profile i {
+  font-size: 20px;
+  color: white;
+}
+
+main {
+  width: 100%;
+}
+
+main .mid-sec {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+main .mid-sec .tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: -0.5px;
+  max-width: 600px;
+  width: 100%;
+  z-index: 2;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  background-color: rgba(0, 0, 0, 0.65);;
+  backdrop-filter: blur(12px);
+}
+
+main .mid-sec .tabs a {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+  position: relative;
+  color: var(--gray-color);
+}
+
+main .mid-sec .tabs .active {
+  color: var(--white-color);
+  font-weight: bold;
+}
+
+main .mid-sec .tabs .active::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: var(--light-blue-color);
+  border-radius: 9999px;
+  bottom: 1px;
+}
+
+main .mid-sec .tabs a:hover {
+  background-color: var(--hover-color);
+}
+
+main .mid-sec .make-post {
+  display: flex;
+  padding: 20px 15px 2px 15px;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+main .mid-sec .make-post > img {
+  margin-right: 15px;
+}
+
+main .mid-sec .make-post > div {
+  width: 100%;
+}
+
+main .mid-sec .make-post > div input {
+  width: 100%;
+  height: 30px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+main .mid-sec .make-post div .tools {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+main .mid-sec .make-post div .tools nav {
+  display: flex;
+  width: 100%;
+}
+
+main .mid-sec .make-post div .tools nav a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+main .mid-sec .make-post div .tools nav a:hover {
+  background-color: #1d9cf03b;
+}
+
+main .mid-sec .make-post div .tools nav a img {
+  height: 18px;
+}
+
+main .mid-sec .make-post div .tools nav a:not(:first-of-type) img {
+  height: 24px;
+}
+
+main .mid-sec .make-post div .tools nav a:nth-child(2) img {
+  height: 26px;
+}
+
+main .mid-sec .make-post div .tools button {
+  padding: 10px 15px;
+}
+
+main .mid-sec .post {
+  padding: 15px;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+main .mid-sec .post .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .mid-sec .post .details div {
+  display: flex;
+  align-items: flex-start;
+}
+
+main .mid-sec .post .details div > div {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+}
+
+main .mid-sec .post .details div > div div {
+  display: flex;
+  flex-direction: row;
+}
+
+main .mid-sec .post .details div img {
+  margin-right: 10px;
+}
+
+main .mid-sec .post .details div h4 {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+main .mid-sec .post .details div p {
+  color: var(--gray-color);
+}
+
+main .mid-sec .post .details .more {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--gray-color);
+  transition: 0.25s all ease;
+}
+
+main .mid-sec .post .details .more:hover {
+  background-color: #1d9cf03b;
+  color: var(--light-blue-color);
+}
+
+main .mid-sec .post .content {
+  color: var(--white-color);
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column !important;
+}
+
+main .mid-sec .post .img {
+  max-width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .mid-sec .post .img img {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+}
+
+main .mid-sec .post .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+main .mid-sec .post .icons a {
+  text-decoration: none;
+  color: var(--gray-color);
+  display: flex;
+  align-items: center;
+  transition: 0.2s all ease;
+}
+
+main .mid-sec .post .icons a i {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: 0.2s all ease;
+}
+
+main .mid-sec .post .icons a:hover {
+  color: var(--light-blue-color);
+}
+
+main .mid-sec .post .icons a:hover i {
+  background-color: #1d9cf03b;
+}
+
+main .mid-sec .post .icons .green:hover {
+  color: #00BA7C;
+}
+
+main .mid-sec .post .icons .green:hover i {
+  background-color: #071A14;
+}
+
+main .mid-sec .post .icons .red:hover {
+  color: #F91880;
+}
+
+main .mid-sec .post .icons .red:hover i {
+  background-color: #200914;
+}
+
+main .mid-sec .post .icons div {
+  display: flex;
+}
+
+footer {
+  width: fit-content;
+  padding: 7.5px 120px 7.5px 7.5px;
+  position: sticky;
+  top: -0.5px;
+  height: 100%;
+  color: white;
+  padding-bottom: 100px;
+}
+
+footer .search {
+  position: relative;
+}
+
+footer .search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-color);
+}
+
+footer .search input {
+  width: 350px;
+  padding: 10px 0;
+  padding-left: 40px;
+  background-color: var(--border-color);
+  border: none;
+  outline: none;
+  border-radius: 9999px;
+  font-size: 16px;
+  color: var(--gray-color);
+}
+
+footer .premium,
+footer .news,
+footer .follow {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  margin: 25px 0;
+  padding: 15px;
+}
+
+footer .premium h2 {
+  font-size: 21px;
+}
+
+footer .premium p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+footer .premium button {
+  padding: 10px 15px;
+}
+
+footer .news,
+footer .follow {
+  padding: 0;
+}
+
+footer .news > h2,
+footer .follow > h2 {
+  font-size: 21px;
+  padding: 15px;
+}
+
+footer .news .card {
+  display: flex;
+  width: 100%;
+  transition: 0.25s all ease;
+  padding: 15px;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+footer .news .card:hover {
+  background-color: #080808;
+}
+
+footer .news .special {
+  direction: ltr;
+  display: flex;
+  align-items: flex-start;
+  justify-content: normal;
+}
+
+footer .news .special img {
+  width: 79px;
+  height: 79px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+}
+
+footer .news .special .details {
+  margin-left: 15px;
+}
+
+footer .news .special .details h2 {
+  font-size: 20px;
+  font-family: inherit;
+}
+
+footer .news .special .details p {
+  color: var(--gray-color);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+footer .news .card h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 22px;
+}
+
+footer .news .card div p {
+  direction: ltr;
+  margin: 5px 0;
+  color: var(--gray-color);
+}
+
+footer .news a,
+footer .follow .show {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--light-blue-color);
+  transition: 0.25s all ease;
+  padding: 15px;
+}
+
+footer .news a:hover,
+footer .follow .show:hover {
+  background-color: #080808;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+footer .follow .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  transition: 0.25s all ease;
+  cursor: pointer;
+}
+
+footer .follow .card:hover {
+  background-color: #080808;
+}
+
+footer .follow .card > div {
+  display: flex;
+  align-items: center;
+}
+
+footer .follow .card div div {
+  margin-left: 10px;
+}
+
+footer .follow .card div div h2 {
+  font-size: 20px;
+}
+
+footer .follow .card div div p {
+  color: var(--gray-color);
+  font-size: 16px;
+}
+
+footer .follow .card button {
+  padding: 5px 10px;
+}
+
+footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: var(--gray-color);
+  margin: 5px;
+  font-size: 14px;
+}
